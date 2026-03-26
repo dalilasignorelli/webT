@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="remove-white" color-interpolation-filters="sRGB">
+      <feColorMatrix
+        in="SourceGraphic"
+        type="matrix"
+        values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -1 -1 -1 0 3"
+      />
+    </filter>
+  </defs>
+  <image
+    href="/favicon-logo.svg"
+    x="0"
+    y="1"
+    width="64"
+    height="62"
+    preserveAspectRatio="xMidYMid meet"
+    filter="url(#remove-white)"
+  />
+</svg>
