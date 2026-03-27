@@ -5,15 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://web-t-peach.vercel.app/about</loc>
+    <loc>https://signorelli-termoidraulica.vercel.app/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://web-t-peach.vercel.app/services</loc>
+    <loc>https://signorelli-termoidraulica.vercel.app/services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://web-t-peach.vercel.app/contact</loc>
+    <loc>https://signorelli-termoidraulica.vercel.app/contact</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
