@@ -1,7 +1,7 @@
 {
   "rewrites": [
-    {
-      "source": "/sitemap.xml",
+   {
+      "source": "/homepage/sitemap.xml",
       "destination": "/sitemap.xml"
     },
     {
