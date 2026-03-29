@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://signorelli-termoidraulica.vercel.app/homepage</loc>
+    <loc>https://signorelligiancarlo-termoidraulica.vercel.app/homepage</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://signorelli-termoidraulica.vercel.app/about</loc>
+    <loc>https://signorelligiancarlo-termoidraulica.vercel.app/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://signorelli-termoidraulica.vercel.app/services</loc>
+    <loc>https://signorelligiancarlo-termoidraulica.vercel.app/services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://signorelli-termoidraulica.vercel.app/contact</loc>
+    <loc>https://signorelligiancarlo-termoidraulica.vercel.app/contact</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
