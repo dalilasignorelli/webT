@@ -24,7 +24,7 @@ function AppShell() {
   }, [location.pathname])
 
   const currentPage = (() => {
-    if (location.pathname === '/homepage') return 'home'
+    if (location.pathname === '/') return 'home'
     if (location.pathname === '/services') return 'services'
     if (location.pathname === '/about') return 'about'
     if (location.pathname === '/contact') return 'contact'
@@ -33,7 +33,7 @@ function AppShell() {
 
   const onNavigate = (page: 'home' | 'services' | 'about' | 'contact') => {
     const pathMap = {
-      home: '/homepage',
+      home: '/',
       services: '/services',
       about: '/about',
       contact: '/contact',
