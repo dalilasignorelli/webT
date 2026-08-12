@@ -67,40 +67,89 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-6">
-            <strong>{isEnglish ? "Heating and Plumbing Experts" : "Esperti in Termoidraulica"}</strong>
-          </h1>
-          <h3 className="mb-6 text-blue-100">
-            {isEnglish
-              ? "Installation, maintenance and repair of boilers, heating, cooling and plumbing systems."
-              : "Installazione, manutenzione e riparazione di caldaie, impianti di riscaldamento, di raffreddamento e idraulici."}
-          </h3>
-          <p className="mb-6 text-blue-100">
-            {isEnglish
-              ? "Fast and professional service throughout the Bergamo area."
-              : "Interventi rapidi e professionali in tutta la provincia di Bergamo."}
-          </p>
-          <Phone className="mx-auto mb-4 mt-4 h-6 w-6 text-white/80" />
-          <span>+39 3341107879</span>
-          <div className="mt-4 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => onNavigate("contact")}
-              className="border border-white/80 bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-700"
-            >
-              {isEnglish ? "Request a Quote" : "Richiedi Preventivo"}
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => onNavigate("services")}
-              className="border border-white/80 bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-700"
-            >
-              {isEnglish ? "Our Services" : "I Nostri Servizi"}
-            </Button>
+     <section className="relative overflow-hidden bg-slate-900 py-24 text-white">
+        {/* Pattern di sfondo — linee che richiamano tubazioni/impianti */}
+        <svg
+          className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.07]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern id="pipes" width="80" height="80" patternUnits="userSpaceOnUse">
+              <path
+                d="M0 40 H30 V10 H80 M40 40 V80"
+                fill="none"
+                stroke="white"
+                strokeWidth="2"
+              />
+              <circle cx="30" cy="10" r="3" fill="white" />
+              <circle cx="40" cy="40" r="3" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#pipes)" />
+        </svg>
+      
+        {/* Accento diagonale in rame */}
+        <div className="absolute -right-24 top-0 h-full w-96 rotate-6 bg-gradient-to-b from-orange-600/20 via-orange-500/10 to-transparent blur-2xl" />
+      
+        <div className="container relative mx-auto px-4">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+            {/* Colonna testo — allineata a sinistra, non centrata */}
+            <div>
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 text-sm font-medium tracking-wide text-orange-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-orange-400" />
+                {isEnglish ? "Serving the Bergamo area" : "Attivi in provincia di Bergamo"}
+              </div>
+      
+              <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                {isEnglish ? "Heating and Plumbing Experts" : "Esperti in Termoidraulica"}
+              </h1>
+      
+              <h3 className="mb-4 max-w-xl text-xl font-normal leading-relaxed text-slate-300">
+                {isEnglish
+                  ? "Installation, maintenance and repair of boilers, heating, cooling and plumbing systems."
+                  : "Installazione, manutenzione e riparazione di caldaie, impianti di riscaldamento, di raffreddamento e idraulici."}
+              </h3>
+      
+              <p className="mb-8 max-w-lg text-base text-slate-400">
+                {isEnglish
+                  ? "Fast and professional service throughout the Bergamo area."
+                  : "Interventi rapidi e professionali in tutta la provincia di Bergamo."}
+              </p>
+      
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Button
+                  size="lg"
+                  onClick={() => onNavigate("contact")}
+                  className="bg-orange-500 text-white hover:bg-orange-600"
+                >
+                  {isEnglish ? "Request a Quote" : "Richiedi Preventivo"}
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => onNavigate("services")}
+                  className="border-slate-600 bg-transparent text-white hover:bg-white/10"
+                >
+                  {isEnglish ? "Our Services" : "I Nostri Servizi"}
+                </Button>
+              </div>
+            </div>
+      
+            {/* Colonna "card" telefono — sostituisce l'icona/testo flottante */}
+            <div className="flex justify-center lg:justify-end">
+              
+                href="tel:+393341107879"
+                className="group flex w-full max-w-xs flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-colors hover:bg-white/10 lg:w-auto"
+              >
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-500/15">
+                  <Phone className="h-6 w-6 text-orange-400" />
+                </span>
+                <span className="text-xs font-medium uppercase tracking-widest text-slate-400">
+                  {isEnglish ? "Call us now" : "Chiamaci ora"}
+                </span>
+                <span className="text-2xl font-bold text-white">+39 3341107879</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
