@@ -137,7 +137,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       
             {/* Colonna "card" telefono — sostituisce l'icona/testo flottante */}
             <div className="flex justify-center lg:justify-end">
-              
+              <a
                 href="tel:+393341107879"
                 className="group flex w-full max-w-xs flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition-colors hover:bg-white/10 lg:w-auto"
               >
