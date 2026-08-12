@@ -67,7 +67,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div>
-     <section className="relative overflow-hidden bg-slate-900 py-24 text-white">
+     <section className="relative overflow-hidden bg-blu-800 py-24 text-white">
         {/* Pattern di sfondo — linee che richiamano tubazioni/impianti */}
         <svg
           className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.07]"
@@ -216,7 +216,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="bg-blue-600 py-16 text-center text-white">
+      <section className="bg-blue-800 py-16 text-center text-white">
         <div className="container mx-auto px-4">
           <h2 className="mb-4">{isEnglish ? "Need an Intervention?" : "Hai Bisogno di un Intervento?"}</h2>
           <p className="mx-auto mb-8 max-w-2xl text-blue-100">
